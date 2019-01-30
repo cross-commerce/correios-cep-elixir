@@ -5,7 +5,7 @@ defmodule Correios.CEP do
 
   alias Correios.CEP.{Address, Error, Parser}
 
-  @client Application.get_env(:correios_cep, :client)
+  @client Application.get_env(:correios_cep, :client, Correios.CEP.Client)
 
   @doc """
   Find address by a given zip code.
